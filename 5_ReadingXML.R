@@ -7,7 +7,7 @@
 library(XML)
 fileUrl <- "http://www.w3schools.com/xml/simple.xml"
 doc <- xmlTreeParse(fileUrl, useInternal=TRUE) # loads the document into R memory for parsing 
-rootNode <- xmlRoot(doc) # weapper element for entire XML document
+rootNode <- xmlRoot(doc) # wrapper element for entire XML document
 xmlName(rootNode) # returns the name of the XML
 
 names(rootNode) # root node wraps the entire document, this command shows the names of these root nodes

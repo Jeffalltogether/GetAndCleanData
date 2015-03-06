@@ -15,6 +15,14 @@ head(DT,3)
 
 tables() # see all the data tables in memory
 
+## Use the fread() function to read a file into R memory as a data.table quickly!!
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
+download.file(fileUrl, destfile = "./quiz1/IdahoHousing.csv")
+list.files("./quiz1") # sort of like the ls() command, shows the files in the directory "./data"
+
+DT <- fread("./quiz1/IdahoHousing.csv", sep = ",", header = TRUE)
+
+
 ## Subsetting Rows
 DT[2,]
 
@@ -25,6 +33,9 @@ DT[c(2,3)] # takes the second and third rows from the data.tabe
 
 ## Subsetting Columns
 DT[,c(2,3)]
+
+# applying a function to a column subsetted by another col variable
+DT[,mean(pwgtp15),by=SEX]
 
 # You can pass a list of functions to perform on columns!!!
 # functions are applied to variables named by columns

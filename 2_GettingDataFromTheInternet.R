@@ -3,7 +3,7 @@
 # right-click to cpoy link address
 # download.file()
 
-setwd("C:/Users/jeffthatcher/Cloud Drive/RRepos/CleaningData")
+setwd("C:/Users/jeffthatcher/Cloud Drive/RRepos/GetCleanData")
 
 if(!file.exists("data")) {
         dir.create("data")
