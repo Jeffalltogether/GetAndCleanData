@@ -71,7 +71,7 @@ DT
 
 set.seed(123)
 DT <- data.table(x=sample(LETTERS[1:3], 1E5, TRUE))
-DT[, .N, by=x] # counts the number of times things appeare grouped by the `x` variable
+DT[, .N, by=x] # counts the number of times things appeared grouped by the `x` variable
 
 ## Keys make subsetting and sorting easier
 DT = data.table(x=rep(c("a","b","c"), each=100), y=rnorm(300))

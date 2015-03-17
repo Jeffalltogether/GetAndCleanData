@@ -4,6 +4,9 @@
 
 library(RMySQL)
 
+## Also see package sqlfd
+library(sqldf)
+
 ## Open connection to online SQL database
 ucscDb <- dbConnect(MySQL(), user="genome",
                     host="genome-mysql.cse.ucsc.edu")
