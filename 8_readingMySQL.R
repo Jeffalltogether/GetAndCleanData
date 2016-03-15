@@ -32,7 +32,7 @@ head(affyData)
 query <- dbSendQuery(hg19, "select * from affyU133Plus2 where misMatches between 1 and 3") # subset the data where values in mismatch column are between 1 and 3
 affyMis <- fetch(query); quantile(affyMis$misMatches)
 
-affyMisSmall <- fetch(query, n=10); dbClearResult(query); # must clear the query from the remote servery when done
+affyMisSmall <- fetch(query, n=10); dbClearResult(query); # must clear the query from the remote server when done
 
 dim(affyMisSmall)
 
